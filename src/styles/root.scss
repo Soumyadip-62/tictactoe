@@ -1,7 +1,9 @@
 body {
-  background-color: bisque;
+  font-family: 'Ariel', sans-serif;
+  background-color: rgb(145, 93, 212);
   padding: 0;
   margin: 0;
+  color: aliceblue;
 }
 
 button {
@@ -24,14 +26,14 @@ button {
   .board-row {
     display: flex;
     flex-direction: row;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid rgb(255, 255, 255);
     &:last-child {
       border-bottom: none;
     }
     .square {
       width: 80px;
       height: 80px;
-      border-right: 2px solid #000;
+      border-right: 2px solid rgb(255, 255, 255);
       font-size: 2.5rem;
       padding: 0;
       overflow: hidden;
@@ -39,6 +41,58 @@ button {
       &:last-child {
         border-right: none;
       }
+      &.winning {
+        animation: scaleText 1.4s infinite;
+        @keyframes scaleText {
+          0% {
+            transform: 2.5rem;
+          }
+          50% {
+            font-size: 3.5rem;
+          }
+          100% {
+            font-size: 2.5rem;
+          }
+        }
+      }
     }
   }
+}
+.text-green {
+  color: greenyellow;
+}
+
+.text-orange {
+  color: orange;
+}
+.heading {
+  color: greenyellow;
+}
+.bg-balls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  z-index: -1;
+}
+.g-btn {
+  background-color: #cc83f7;
+  font-size: 15px;
+  margin-top: 10%;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 23px;
+  display: inline-block;
+}
+.g-btn:hover {
+  background-color: rgb(126, 68, 202);
+  color: white;
+}
+.text-para {
+  font-weight: bolder;
+  color: greenyellow;
+  font-size: 17px;
+  padding-top: 5%;
 }

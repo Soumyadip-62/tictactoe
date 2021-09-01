@@ -32,16 +32,19 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Tic Tac Toe</h1>
+      <h1>
+        Tic <span className="heading">Tac</span> Toe
+      </h1>
       <StateMessege winner={winner} isXNext={isXNext} board={board} />
       <Board
         board={board}
         handleSquareClick={handleSquareClick}
         winSquare={winSquare}
       />
-      <button type="button" onClick={onNewGame}>
-        Start new Game
+      <button type="button" onClick={onNewGame} className="g-btn">
+        New Game
       </button>
+      <p className="text-para">Made By Caspian</p>
     </div>
   );
 };
